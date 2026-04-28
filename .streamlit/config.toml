@@ -6,13 +6,21 @@ secondaryBackgroundColor = "#161B26"
 textColor = "#E6E8EB"
 
 [server]
-headless = false
+headless = true
 runOnSave = false
 maxUploadSize = 500
+enableXsrfProtection = false
 
 [browser]
 gatherUsageStats = false
+serverAddress = "0.0.0.0"
 
 [client]
 toolbarMode = "minimal"
-showErrorDetails = true
+showErrorDetails = false
+
+[logger]
+level = "error"
+
+[telemetry]
+enabled = false
