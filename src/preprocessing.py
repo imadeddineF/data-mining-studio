@@ -291,16 +291,15 @@ def _render_visualisation() -> None:
 def render() -> None:
     """Render the full preprocessing tab."""
 
+    _render_import()
+
     if st.session_state.df is None:
-        _render_import()
         empty_state(
             "📂",
             "Aucune donnée chargée",
             "Importez un fichier ci-dessus ou choisissez un dataset de démonstration pour commencer.",
         )
         return
-
-    _render_import()
 
     # Quick action bar
     bar = st.columns([1, 1, 1, 4])
